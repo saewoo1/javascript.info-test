@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let calculator = {
+            read() {
+                this.add1 = +prompt("값을 입력해주세요", '');
+                this.add2 = +prompt("값을 입력해주세요", '');
+            },
+
+            sum() {
+                return this.add1 + this.add2;
+            },
+
+            mul() {
+                return this.add1 * this.add2;
+            }
+        };
+
+        calculator.read();
+        alert(calculator.sum());
+        alert(calculator.mul());
+    </script>
+</body>
+</html>
