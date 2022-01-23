@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let styles = ["Jazz", "Blues"];
+        console.log(styles);
+        styles.push("Rock-n-Roll");
+        console.log(styles);
+        styles[Math.floor((styles.length - 1) / 2)] = "Classics"; // arr.length다.. length() 아님;;
+        console.log(styles);
+        styles.shift();
+        console.log(styles);
+        styles.pop();
+        console.log(styles);
+        styles.length = 5; 
+        styles.unshift("Rap", "Reggae");
+        console.log(styles);
+
+    </script>
+</body>
+</html>
