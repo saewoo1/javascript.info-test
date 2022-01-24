@@ -8,13 +8,13 @@
 </head>
 <body>
     <script>
-        let arr = ["a", "b"];
+        let fruits = ["사과", "배", "오렌지"];
 
-        arr.push(function() {
-            alert(this);
-        })
+        let shoppingCart = fruits;
+        shoppingCart.push("바나나");
 
-        arr[2]();
+        alert(fruits.length);
+        alert(shoppingCart.length);
     </script>
 </body>
 </html>
