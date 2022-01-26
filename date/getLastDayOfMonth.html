@@ -8,15 +8,13 @@
 </head>
 <body>
     <script>
-        function getLocalDay(date) {
-            let day = date.getDay();
+        function getLastDayOfMonth(year, month) {
+            let lastDay = new Date(year, month + 1, 0);
+            return lastDay.getDate();
 
-            if (day == 0) {
-                day = 7;
-            }
-            return day;
         }
-        
+
+        alert(getLastDayOfMonth(2012, 1));
     </script>
 </body>
 </html>
