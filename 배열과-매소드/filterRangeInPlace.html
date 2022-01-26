@@ -15,7 +15,7 @@
                 let value = arr[i];
                 if (value < a || value > b) {
                     arr.splice(i, 1); // index, 지울 개수, 추가할 내용
-                    i--;
+                    i--; // i--를 안넣으면 그 다음 arr[0]을 검사를 못해!!
                 }
             }
         }
