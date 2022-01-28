@@ -8,10 +8,18 @@
 </head>
 <body>
     <script>
-        let timerId = setInterval(() => {alert('읏짜')}, 1000);
+        //let bound = func.bind(context, [arg1], [arg2] ...)
 
-        setTimeout(() => {clearInterval(timerId); alert('끝짜')},5000);
+        function mul(a, b) {
+            return a * b;
+        }
 
+        let double = mul.bind(null, 2);
+
+        alert(double(3));
+        alert(double(4));
+        alert(double(5));
+        alert(double(6));
     </script>
 </body>
 </html>

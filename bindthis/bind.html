@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            firstName: "Hyun",
+        }
+
+        function func() {
+            alert(this.firstName);
+        }
+
+        let funcUser = func.bind(user);
+        funcUser();
+        //ex 2
+
+        let user2 = {
+            firstName2: "John",
+        };
+
+        function func2(phrase) {
+            alert(phrase + ' ' + this.firstName2);
+        }
+
+        let funcUser2 = func2.bind(user2);
+        funcUser2("Hello");
+
+    </script>
+</body>
+</html>

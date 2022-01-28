@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            firstName: "Hyun",
+            sayHi() {
+                alert(`Hello, ${this.firstName}!`); // this를 안쓰면 sayHi() 내부에서 firstName이 누군지 모름. block 단위라
+            }
+        };
+
+        setTimeout(() => user.sayHi(), 1000);
+        user= { sayHi() { alert ("누구세용?"); } };
+    </script>
+</body>
+</html>

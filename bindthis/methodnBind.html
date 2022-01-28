@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            firstName: "John",
+            sayHi() {
+                alert(`Hello, ${this.firstName}!!`);
+            }
+        }
+
+        let sayHi = user.sayHi.bind(user); // 이러면 이제 sayHi는 하나의 독립적인 bind 함수
+
+        //setTimeout(sayHi, 1000);
+
+        user = {
+            sayHi() {
+                alert('새치기!!!');
+            }
+        }
+
+        let user2 = {
+            firstName2: "Hyun",
+            bye(phrase) {
+                alert(`${phrase}, ${this.firstName2}!!!`);
+            }
+        };
+
+        let bye = user2.bye.bind(user2);
+
+        /*
+        setTimeout(function () {
+            return bye("AAAA")
+        }, 3000);
+        */
+        setTimeout(() => {bye("AAA")} , 3000);
+        bye("Bye!!");
+        bye("Hello!!!");
+
+        //이제 이렇게 해도 setTimeout엔 새치기 당하지 않음
+    </script>
+</body>
+</html>
