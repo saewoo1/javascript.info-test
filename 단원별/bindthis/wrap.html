@@ -16,7 +16,8 @@
         };
 
         setTimeout(() => user.sayHi(), 1000);
-        user= { sayHi() { alert ("누구세용?"); } };
+
+        user= { sayHi() { alert ("누구세용?"); } }; // 이렇게 중간에 값이 바뀌면, 1초가 되기 전에 바뀌어버림!!
     </script>
 </body>
 </html>
