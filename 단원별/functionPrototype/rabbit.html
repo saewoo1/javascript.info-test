@@ -8,17 +8,19 @@
 </head>
 <body>
     <script>
-        function f() {
-            alert(this);
-        }
-
-        let user = {
-            g: f.bind(null),
+        let animal = {
+            eats: true
         };
 
-        user.g();
-        //bind를 적용한 함수의 컨텍스트는 완전히 고정됩니다. 한번 고정되면 바꿀 방법이 없습니다.
+        function Rabbit(name) {
+            this.name = name;
+        }
 
+        Rabbit.prototype = animal;
+
+        let rabbit = new Rabbit("흰 토끠");
+        alert(rabbit.eats)
+        console.log(rabbit);
     </script>
 </body>
 </html>
