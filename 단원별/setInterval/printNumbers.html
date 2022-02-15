@@ -1,24 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        function printNumbers(from, to) {
-            let timeId = setInterval(function() {
-                alert(from);
-                if (from == to) {
-                    clearInterval(timeId);
-                }
-                from++;
-            }, 1000);
-        }
+<script>
+    function printNumbers(from, to) {
+        let timeId = setInterval(function() {
+            alert(from);
+            if (from == to) {
+                clearInterval(timeId);
+            }
+            from++;
+        }, 1000);
+    }
 
-        printNumbers(5, 10);
-    </script>
-</body>
-</html>
+    printNumbers(5, 10);
+</script>
